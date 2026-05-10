@@ -4,6 +4,11 @@ A Chrome extension that organises sites you use into self-defined **stacks**, tr
 
 Created by **Bhargavaram Krishnapur** as a personal/educational project.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1a53814a-2647-41f8-8900-5ddcf12c2a64" alt="home" width="45%" />
+  <img src="https://github.com/user-attachments/assets/585e55ab-6f4c-4b31-b19f-ed837739867f" alt="settings" width="45%" />
+</p>
+
 ## Install
 
 1. Unzip this folder somewhere stable (not Downloads — Chrome reads the folder live).
