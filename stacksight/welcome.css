@@ -1,0 +1,234 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #1a1a1a;
+  color: #f5f5f5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 56px 32px 80px;
+}
+
+/* Hero */
+.hero { margin-bottom: 56px; }
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.brand-mark {
+  position: relative;
+  width: 36px;
+  height: 30px;
+}
+.brand-mark .card {
+  position: absolute;
+  width: 26px;
+  height: 22px;
+  border-radius: 5px;
+  background: #ff6b35;
+}
+.brand-mark .c1 { top: 8px; left: 0; opacity: 0.3; }
+.brand-mark .c2 { top: 4px; left: 5px; opacity: 0.6; }
+.brand-mark .c3 { top: 0;   left: 10px; opacity: 1; }
+
+.brand-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.3px;
+}
+
+.tagline {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+
+.lede {
+  font-size: 17px;
+  line-height: 1.55;
+  color: #c9c2bb;
+  max-width: 560px;
+}
+
+/* Section blocks */
+.block { margin-bottom: 48px; }
+
+.block-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #ff6b35;
+  margin-bottom: 18px;
+}
+
+/* Steps */
+.steps { list-style: none; }
+.steps li {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+.steps li:last-child { border-bottom: none; }
+.num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ff6b35;
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.step-body { font-size: 14px; color: #aaa; line-height: 1.5; }
+
+kbd {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: #2a2a2a;
+  color: #ff6b35;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  vertical-align: 1px;
+}
+
+/* Feature grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.card {
+  background: #232323;
+  border: 1px solid #2f2f2f;
+  border-left: 3px solid #ff6b35;
+  border-radius: 6px;
+  padding: 16px 18px;
+}
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.card-body { font-size: 13px; color: #aaa; line-height: 1.5; }
+
+/* Privacy */
+.privacy {
+  background: #fff8f4;
+  color: #1a1a1a;
+  border-radius: 8px;
+  padding: 22px 24px;
+  margin-bottom: 36px;
+}
+.privacy-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #d44d12;
+  margin-bottom: 6px;
+}
+.privacy p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #444;
+}
+
+/* CTA */
+.cta-row { text-align: center; margin: 36px 0; }
+.cta {
+  background: #ff6b35;
+  color: #1a1a1a;
+  border: none;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s ease;
+}
+.cta:hover { background: #ff8556; }
+.cta:active { transform: translateY(1px); }
+
+/* Legal disclosure */
+.legal {
+  background: #1f1f1f;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  margin-bottom: 32px;
+  font-size: 13px;
+}
+.legal summary {
+  padding: 14px 18px;
+  cursor: pointer;
+  color: #c9c2bb;
+  font-weight: 600;
+  user-select: none;
+  list-style: none;
+}
+.legal summary::-webkit-details-marker { display: none; }
+.legal summary::before {
+  content: '▸ ';
+  color: #ff6b35;
+}
+.legal[open] summary::before { content: '▾ '; }
+.legal-body {
+  padding: 0 18px 18px;
+  color: #999;
+  line-height: 1.6;
+}
+.legal-body h4 {
+  font-size: 13px;
+  color: #fff;
+  margin: 14px 0 4px;
+  font-weight: 700;
+}
+.legal-body p { margin-bottom: 8px; }
+.legal-body strong { color: #ff6b35; }
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding-top: 28px;
+  border-top: 1px solid #2a2a2a;
+  color: #888;
+  font-size: 13px;
+}
+.footer strong { color: #fff; font-weight: 600; }
+.footer-meta {
+  font-size: 11px;
+  color: #555;
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .page { padding: 40px 20px 60px; }
+  .tagline { font-size: 32px; }
+  .grid { grid-template-columns: 1fr; }
+}

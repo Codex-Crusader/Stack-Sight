@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="brand">StackSight</div>
+      <div class="header-right">
+        <div class="cost-total" id="cost-total">$0.00 / mo</div>
+        <button id="btn-settings" class="header-icon" title="Settings">⚙</button>
+      </div>
+    </header>
+
+    <div class="search-row">
+      <input type="text" id="search" placeholder="Search across all stacks…" autocomplete="off" />
+    </div>
+
+    <div class="tabs" id="tabs"></div>
+
+    <div class="renewal-banner" id="renewal-banner" hidden></div>
+
+    <div class="select-row">
+      <button id="btn-select" class="select-toggle">☐ Select</button>
+    </div>
+
+    <div class="bulk-bar" id="bulk-bar" hidden>
+      <span class="bulk-count" id="bulk-count">0 selected</span>
+      <select id="bulk-stack"></select>
+      <button id="bulk-move" class="bulk-btn">Move</button>
+      <button id="bulk-delete" class="bulk-btn danger">Delete</button>
+      <button id="bulk-done" class="bulk-btn">Done</button>
+    </div>
+
+    <div class="items" id="items"></div>
+
+    <div class="actions-bar">
+      <button id="btn-add" class="primary">+ Add</button>
+      <button id="btn-stacks">Stacks</button>
+      <button id="btn-import">Import</button>
+      <button id="btn-export">Export</button>
+    </div>
+
+    <div class="footer-credit">by <strong>Bhargavaram Krishnapur</strong> · v1.3</div>
+  </div>
+
+  <!-- Hidden file input for import -->
+  <input type="file" id="import-file" accept=".json,application/json" hidden>
+
+  <!-- Coach mark (first-run hint near search) -->
+  <div class="coach-mark" id="coach-mark" hidden>
+    <div class="coach-arrow"></div>
+    <div class="coach-body">
+      <strong>Quick launcher tip</strong>
+      <div>Type to search. <kbd>↑</kbd><kbd>↓</kbd> to navigate. <kbd>Enter</kbd> to open.</div>
+      <button id="coach-dismiss">Got it</button>
+    </div>
+  </div>
+
+  <!-- Item editor modal -->
+  <div class="modal" id="item-modal" hidden>
+    <div class="modal-content">
+      <h3 id="item-modal-title">Add Item</h3>
+      <label>Name<input type="text" id="item-name"></label>
+      <label>URL<input type="text" id="item-url" placeholder="https://example.com"></label>
+      <label>Stack<select id="item-stack"></select></label>
+      <div class="row-2">
+        <label>Cost<input type="number" id="item-cost" step="0.01" min="0" placeholder="0.00"></label>
+        <label>Billing
+          <select id="item-billing">
+            <option value="">—</option>
+            <option value="monthly">Monthly</option>
+            <option value="yearly">Yearly</option>
+          </select>
+        </label>
+      </div>
+      <label class="renewal-row" id="renewal-row" hidden>
+        Next renewal<input type="date" id="item-renewal">
+      </label>
+      <label>Note<textarea id="item-note" rows="2"></textarea></label>
+      <div class="modal-actions">
+        <button id="item-delete" class="danger" hidden>Delete</button>
+        <div class="spacer"></div>
+        <button id="item-cancel">Cancel</button>
+        <button id="item-save" class="primary">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stack manager modal -->
+  <div class="modal" id="stacks-modal" hidden>
+    <div class="modal-content">
+      <h3>Manage Stacks</h3>
+      <div id="stacks-list"></div>
+      <div class="add-stack-row">
+        <input type="text" id="new-stack-name" placeholder="New stack name">
+        <button id="new-stack-add">Add</button>
+      </div>
+      <div class="modal-actions">
+        <div class="spacer"></div>
+        <button id="stacks-close" class="primary">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Import confirm modal -->
+  <div class="modal" id="import-modal" hidden>
+    <div class="modal-content">
+      <h3>Import data</h3>
+      <div class="import-summary" id="import-summary"></div>
+      <p class="import-help">Choose how to handle existing items:</p>
+      <div class="modal-actions">
+        <button id="import-cancel">Cancel</button>
+        <div class="spacer"></div>
+        <button id="import-merge" class="primary">Add to existing</button>
+        <button id="import-replace" class="danger">Replace everything</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings + About modal -->
+  <div class="modal" id="settings-modal" hidden>
+    <div class="modal-content settings-content">
+      <h3>Settings</h3>
+
+      <label>Currency
+        <select id="setting-currency">
+          <option value="$">$ — US Dollar</option>
+          <option value="€">€ — Euro</option>
+          <option value="£">£ — British Pound</option>
+          <option value="¥">¥ — Yen / Yuan</option>
+          <option value="₹">₹ — Indian Rupee</option>
+          <option value="A$">A$ — Australian Dollar</option>
+          <option value="C$">C$ — Canadian Dollar</option>
+        </select>
+      </label>
+
+      <details class="legal-section">
+        <summary>Disclaimer & Terms of Use</summary>
+        <div class="legal-body" id="settings-legal"></div>
+      </details>
+
+      <div class="about-block">
+        <div class="about-title">About</div>
+        <div class="about-line">StackSight · v1.3.0</div>
+        <div class="about-line">Created by <strong>Bhargavaram Krishnapur</strong></div>
+        <div class="about-line about-muted">Personal &amp; educational project. All data is local.</div>
+      </div>
+
+      <div class="modal-actions">
+        <div class="spacer"></div>
+        <button id="settings-close" class="primary">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

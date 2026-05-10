@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Welcome to StackSight</title>
+  <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+  <main class="page">
+
+    <header class="hero">
+      <div class="brand-row">
+        <div class="brand-mark" aria-hidden="true">
+          <span class="card c1"></span>
+          <span class="card c2"></span>
+          <span class="card c3"></span>
+        </div>
+        <span class="brand-text">StackSight</span>
+      </div>
+      <h1 class="tagline">Your browser, finally organised.</h1>
+      <p class="lede">Group the sites you actually use into stacks. See how often you visit each one. Spot what you're paying for and not opening.</p>
+    </header>
+
+    <section class="block">
+      <div class="block-label">THREE STEPS</div>
+      <ol class="steps">
+        <li>
+          <span class="num">1</span>
+          <div>
+            <div class="step-title">Visit a site you use regularly.</div>
+            <div class="step-body">A small prompt appears in the bottom-right corner.</div>
+          </div>
+        </li>
+        <li>
+          <span class="num">2</span>
+          <div>
+            <div class="step-title">Pick a stack — or create one.</div>
+            <div class="step-body">Stacks are your own categories. "Work", "Banking", "Reading", whatever fits.</div>
+          </div>
+        </li>
+        <li>
+          <span class="num">3</span>
+          <div>
+            <div class="step-title">Open the popup any time with <kbd id="shortcut">Ctrl + Shift + S</kbd></div>
+            <div class="step-body">Search, hit Enter, and you're there. Muscle memory in two days.</div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="block">
+      <div class="block-label">WHAT YOU GET</div>
+      <div class="grid">
+        <div class="card">
+          <div class="card-title">Quick launcher</div>
+          <div class="card-body">Type a few letters, press Enter. Faster than tab-hunting.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Cost-per-visit</div>
+          <div class="card-body">"$15/mo, 1 visit" becomes "$15/visit." The picture is unmissable.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Cancellation candidates</div>
+          <div class="card-body">A "Stale" tab appears when you have paid items you haven't used.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Renewal alerts</div>
+          <div class="card-body">A small banner if a paid service renews in the next 7 days.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="privacy">
+      <div class="privacy-title">Your data stays with you.</div>
+      <p>
+        Nothing leaves your browser. No accounts, no cloud, no analytics, no telemetry.
+        Removing the extension wipes everything permanently.
+      </p>
+    </section>
+
+    <div class="cta-row">
+      <button id="cta" class="cta">Got it — let's go</button>
+    </div>
+
+    <details class="legal">
+      <summary>Disclaimer & Terms of Use</summary>
+      <div class="legal-body" id="legal-body">
+        <!-- filled in by welcome.js -->
+      </div>
+    </details>
+
+    <footer class="footer">
+      <div>Created by <strong>Bhargavaram Krishnapur</strong></div>
+      <div class="footer-meta">StackSight · v1.3.0 · Personal & educational use</div>
+    </footer>
+
+  </main>
+
+  <script src="welcome.js"></script>
+</body>
+</html>

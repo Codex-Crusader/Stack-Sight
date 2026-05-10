@@ -1,0 +1,127 @@
+==========================================
+  StackSight 1.3.0 - Installation
+==========================================
+
+StackSight is a Chrome extension that helps you organise the
+websites you use into stacks, track usage, and spot subscriptions
+you're paying for but don't open.
+
+It is loaded as an unpacked extension. It is NOT on the Chrome
+Web Store, and there are no plans to put it there.
+
+
+------------------------------------------
+  Setup (about 30 seconds)
+------------------------------------------
+
+  1. Unzip this file somewhere stable.
+
+     IMPORTANT: do NOT keep the folder in Downloads or Desktop.
+     Chrome reads the folder live every time it starts. Move it
+     somewhere you won't accidentally delete, like:
+
+         Documents/Extensions/stacksight/
+
+  2. Open Chrome and go to:
+
+         chrome://extensions
+
+  3. In the top-right corner, turn on "Developer mode".
+
+  4. Click the "Load unpacked" button.
+
+  5. Select the 'stacksight' folder you unzipped.
+
+  6. Pin the extension from the puzzle-piece icon in your Chrome
+     toolbar so it shows up next to the address bar.
+
+That's it. A welcome page will open the first time, with a short
+walkthrough.
+
+
+------------------------------------------
+  Keyboard shortcut
+------------------------------------------
+
+       Ctrl + Shift + S      (Windows / Linux)
+       Cmd  + Shift + S      (Mac)
+
+Opens the popup. Type to search, Enter to open, Esc to clear,
+arrow keys to navigate.
+
+
+------------------------------------------
+  How it works
+------------------------------------------
+
+  - When you visit a site you haven't seen before, a small prompt
+    appears in the bottom-right corner asking which stack to add
+    it to. Pick one or create a new one. You can also dismiss it
+    permanently for that site.
+
+  - Every time you revisit a tracked site, its last-visited time
+    and visit count update automatically.
+
+  - Open the popup with the keyboard shortcut to search, see your
+    stacks, check what you're spending monthly, and find paid
+    services you haven't used recently.
+
+
+------------------------------------------
+  Important
+------------------------------------------
+
+  - All your data stays in your browser. Nothing is sent to any
+    server. There are no accounts.
+
+  - If you uninstall the extension or clear browser storage, all
+    your stacks and items are deleted permanently.
+
+  - Use the Export button in the popup to back up your data as a
+    JSON file. The Import button loads it back.
+
+  - See LEGAL.md for the full disclaimer and terms of use.
+
+
+------------------------------------------
+  Updating to a future version
+------------------------------------------
+
+  1. Download the new release zip.
+  2. Unzip it over the existing folder, overwriting all files.
+  3. Go to chrome://extensions and click the refresh icon on the
+     StackSight card.
+
+Your data carries over automatically.
+
+
+------------------------------------------
+  Troubleshooting
+------------------------------------------
+
+  Extension shows errors in chrome://extensions:
+    Click the "Errors" button on the StackSight card to see
+    details. The most common cause is editing files while Chrome
+    is reading them. Close Chrome, fix the file, reopen Chrome.
+
+  The popup looks broken:
+    Right-click the extension icon and choose "Inspect popup".
+    The Console tab will show what went wrong.
+
+  The keyboard shortcut doesn't work:
+    Some Chrome shortcuts conflict with system shortcuts. Visit
+    chrome://extensions/shortcuts to rebind it to something else.
+
+
+------------------------------------------
+  Author
+------------------------------------------
+
+Created by Bhargavaram Krishnapur as a personal and educational
+project.
+
+Personal use is permitted. Commercial use, redistribution, and
+hosting as a service require written permission. See LICENSE
+file for full terms.
+
+==========================================
