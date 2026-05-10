@@ -169,6 +169,7 @@ stacksight/
 ├── LEGAL.md                      Full disclaimer & terms
 ├── LICENSE                       Personal-use license
 └── .gitignore
+```
 
 ## Legal
 
